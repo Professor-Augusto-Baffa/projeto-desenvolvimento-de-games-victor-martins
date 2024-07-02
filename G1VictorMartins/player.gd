@@ -1,11 +1,12 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 var screen_size : Vector2
-const SPEED = 300
-
+#const SPEED = 300
+var SPEED = 300
 var spawn_points := []
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	DisplayServer.window_set_title("Bird Survivor")
 	#position = screen_size/2
 
 func _physics_process(delta):
@@ -45,3 +46,5 @@ func _physics_process(delta):
 		if $AnimatedSprite2D.frame == 2 || $AnimatedSprite2D.frame == 5:
 			$AnimatedSprite2D.pause()
 			#$AnimatedSprite2D.frame = 2
+	position.x = clamp(position.x, -1900, 1900)
+	position.y = clamp(position.y, -950, 950)

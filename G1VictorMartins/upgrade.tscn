@@ -1,0 +1,118 @@
+[gd_scene load_steps=3 format=3 uid="uid://6d0n5giacco7"]
+
+[ext_resource type="Script" path="res://UpgradeContainer.gd" id="1_2rq7o"]
+
+[sub_resource type="SystemFont" id="SystemFont_10k5v"]
+subpixel_positioning = 0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2rq7o")
+
+[node name="GridContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 800.0
+offset_right = 625.0
+offset_bottom = 800.0
+theme_override_constants/separation = 300
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Panel"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]speed[/center]"
+fit_content = true
+
+[node name="Panel2" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Panel2"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]speed[/center]"
+fit_content = true
+
+[node name="Panel3" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer/Panel3"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]speed[/center]"
+fit_content = true
+
+[node name="GridContainer2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 872.0
+offset_right = 625.0
+offset_bottom = 872.0
+theme_override_constants/separation = 300
+
+[node name="Panel" type="Panel" parent="GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer2/Panel"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_colors/default_color = Color(1, 1, 1, 0.490196)
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Press 1[/center]"
+fit_content = true
+
+[node name="Panel2" type="Panel" parent="GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer2/Panel2"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_colors/default_color = Color(1, 1, 1, 0.490196)
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Press 2[/center]"
+fit_content = true
+
+[node name="Panel3" type="Panel" parent="GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GridContainer2/Panel3"]
+layout_mode = 0
+offset_right = 350.0
+offset_bottom = 55.0
+theme_override_colors/default_color = Color(1, 1, 1, 0.490196)
+theme_override_fonts/normal_font = SubResource("SystemFont_10k5v")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Press 3[/center]"
+fit_content = true

@@ -1,9 +1,11 @@
 extends CharacterBody2D
+const Player := preload("res://player.gd")
 const Enemy := preload("res://enemy.gd")
 var player_position: Vector2 = Vector2.ZERO
 const SPEED = 1
 var old_velocity: Vector2 = Vector2.ZERO
-
+var life = 2
+@onready var world = get_tree().root.get_node("world")
 func _ready():
 	#print("enemy ready")
 	pass
@@ -27,6 +29,10 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity)
 	if collision:
 		old_velocity = velocity.bounce(collision.get_normal())
+		var collisionTarget = collision.get_collider()
+		if collisionTarget is Player:
+			#print("done")
+			world.emit_signal("game_over")
 		#var shot = collision.get_collider()
 		#if shot is Enemy:
 			#shot.queue_free()
